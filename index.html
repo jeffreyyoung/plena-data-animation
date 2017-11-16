@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+	<div class="plena-data-animation-contaier">
+		<svg class="plena-data-animation" viewBox="0 0 200 120">
+			<path class='data-wire' id="path1" d="M20 10 C 50 10, 40 60, 100 60    M100 60 C 130 60, 170 30, 200 30"/>
+			<path class='data-wire' id="path5" d="M20 110 C 50 110, 40 60, 100 60 M100 60 C 130 60, 170 90, 200 90"/>
+			<!--straight line -->
+			<path class='data-wire' id="path3" d="M20 60 L 200 60"/>
+			<!--sandwiched lines that stop halfway -->
+			<path class='data-wire' id="path2" d="M20 35 C 50 35, 40 60, 100 60 M100 60 L 90 60 M90 60 L 100 60 M100 60 L 90 60 M90 60 L 100 60 M100 60 L 90 60 M90 60 L 100 60 M100 60 L 90 60 M90 60 L 100 60 M100 60 L 90 60 M90 60 L 100 60 "/>
+			<path class='data-wire' id="path4" d="M20 85 C 50 85, 40 60, 100 60 M100 60 L 90 60 M90 60 L 100 60 M100 60 L 90 60 M90 60 L 100 60 M100 60 L 90 60 M90 60 L 100 60"/>
+			
+			
+			<circle class='flying-circle' plena-data-animation-path-id='path1' cx="" cy="" r="1.5">
+				<!--<animateMotion begin="0" dur="3s" repeatCount="indefinite"> NOT IE COMPATIBLE...
+					<mpath xlink:href="#path1"/>
+				</animateMotion>-->
+			</circle>
+
+			<circle class='flying-circle' plena-data-animation-path-id='path2' cx="" cy="" r="1.5">
+				<!--<animateMotion begin="0.4" id='shortAnimation1'dur="3s" repeatCount="indefinite">
+					<mpath xlink:href="#path2"/>
+				</animateMotion>-->
+			</circle>
+
+			<circle class='flying-circle' plena-data-animation-path-id='path3' cx="" cy="" r="1.5">
+				<!--<animateMotion id='shortAnimation2'begin="0.2" dur="3s" repeatCount="indefinite">
+					<mpath xlink:href="#path4"/>
+				</animateMotion>-->
+			</circle>
+
+			<circle class='flying-circle' plena-data-animation-path-id='path4' cx="" cy="" r="1.5">
+				<!-- <animateMotion begin=".1s" dur="3s" repeatCount="indefinite">
+					<mpath xlink:href="#path3"/>
+				</animateMotion> -->
+			</circle>
+
+			<circle  class='flying-circle' plena-data-animation-path-id='path5' cx="" cy="" r="1.5">
+				<!--<animateMotion begin=".3s" dur="3s" repeatCount="indefinite">
+					<mpath xlink:href="#path5"/>
+				</animateMotion>-->
+			</circle>
+			
+						
+			<image class='data-source-image' id="image1" xlink:href="/images/data_source_access.png" x="0" y="0" height="20" width="20"/>
+			<image class='data-source-image' id="image5" xlink:href="/images/data_source_aws.png" x="0" y="100" height="20" width="20"/>
+			<image class='data-source-image' id="image3" xlink:href="/images/data_source_mysql.png" x="0" y="50" height="20" width="20"/>
+			<image class='data-source-image' id="image2" xlink:href="/images/data_source_salesforce.png" x="0" y="25" height="20" width="20"/>
+			<image class='data-source-image' id="image4" xlink:href="/images/data_source_facebook.png" x="0" y="75" height="20" width="20"/>
+
+			<image id="animation-logo" class='animation-logo' xlink:href="yarrrr.png" x="65" y="36" height="35"/>
+			
+			
+			
+			<!-- charts -->
+			<svg class='bar-chart' x='180' y='48'>
+					<rect class='chart-bg' width='20' height='20'></rect>
+					<polyline class='chart-axis' points="1,19 19.5,19"></polyline>
+					<rect class='bar-chart-bar-colored' width="3.5" height="17" x='1' y="1"></rect>
+					<rect class='bar-chart-bar-colored' width="3.5" height="17" x='6' y="1"></rect>
+					<rect class='bar-chart-bar-colored' width="3.5" height="17" x='11' y="1"></rect>
+					<rect class='bar-chart-bar-colored' width="3.5" height="17" x='16' y="1"></rect>
+					
+					<rect class='bar-chart-bar' width="4" height="3" x='1' y="1"></rect>
+					<rect class='bar-chart-bar' width="4" height="8" x='6' y="1"></rect>
+					<rect class='bar-chart-bar' width="4" height="4" x='11' y="1"></rect>
+					<rect class='bar-chart-bar' width="4" height="5" x='16' y="1"></rect>
+			</svg>
+			
+			<svg class='line-chart' x='180' y='23'>
+					<rect class='chart-bg' width='20' height='20'></rect>
+					<polyline class='chart-axis' points="1,3 1,19 19,19 "></polyline>
+					<path d="M0 60 L 200 60"></path>
+					<polyline class='line-chart-line' points="3,16 8,8 13,8 18,4"></polyline>
+			</svg>
+			
+			<svg class='pie-chart' width='20' height='20' x='180' y='80'>
+					<rect class='chart-bg' width='20' height='20'></rect>
+					<circle r="10" cx="10" cy="10" class="pie-bg"/>
+					<circle r="5" cx="10" cy="10" class="pie"/>
+			</svg>
+			
+		</svg>
+	</div>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src='/plena-data-animation.js'></script>
+</body>
+
+</html>

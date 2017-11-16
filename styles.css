@@ -1,0 +1,80 @@
+/* https://css-tricks.com/how-to-make-charts-with-svg/ */
+.plena-data-animation {
+	display: block;
+	max-width: 650px;
+	margin: 0 auto;
+}
+
+.plena-data-animation .data-wire {
+	stroke: #ddd;
+	fill: transparent;
+	stroke-width: 0.5;
+}
+
+.plena-data-animation .flying-circle {
+	fill: black;
+	stroke-width: 0.5;
+}
+
+.plena-data-animation .animation-logo-bounce {  
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+
+
+@keyframes floating {
+    0% { transform: scale(1); }
+		50% { transform: scale(1); }
+		54% { transform: scale(1.03); }
+    58%  { transform: scale(1); }
+		62% { transform: scale(1.03); }
+		66% { transform: scale(1); }
+    100%   { transform: scale(1); }    
+}
+
+.plena-data-animation .chart-bg {
+	fill: white;
+}
+
+
+
+.plena-data-animation .bar-chart-bar {
+	fill: white;
+	stroke-width: 0.2;
+	stroke: white;
+}
+
+.plena-data-animation .bar-chart-bar-colored {
+	fill: #44d9e6
+}
+
+
+.plena-data-animation .line-chart-line {
+	fill: none;
+	stroke: #44d9e6;
+	stroke-width: 1;
+}
+
+.plena-data-animation .bar-chart {
+	
+}
+
+.plena-data-animation .pie-chart 	.pie {
+	fill: #ddd;
+	stroke: #44d9e6;
+	stroke-width: 10;
+	stroke-dasharray: 3 32.4;
+	transition: stroke-dasharray .5s linear;
+}
+
+.plena-data-animation .pie-chart 	.pie-bg {
+	fill: #ddd;
+}
+
+.plena-data-animation .chart-axis {
+	stroke-width: .3;
+	stroke: black;
+	fill:none;
+}
