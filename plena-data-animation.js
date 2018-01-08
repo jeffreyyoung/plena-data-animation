@@ -1,7 +1,8 @@
 "use strict";
 
 var ANIMATION_DURATION = 3000;
-var IMAGES = ["data_source_access.png", "data_source_adwords.png", "data_source_aws.png", "data_source_bing.png", "data_source_criteo.png", "data_source_entrata.png", "data_source_excel.png", "data_source_facebook.png", "data_source_firebird.png", "data_source_googleanalytics.png", "data_source_hadoop.png", "data_source_kenshoo.png", "data_source_mailchimp.png", "data_source_marin.png", "data_source_mongo.png", "data_source_moz.png", "data_source_mysql.png", "data_source_oracle.png", "data_source_postgres.png", "data_source_quickbooks.png", "data_source_salesforce.png", "data_source_sparksql.png", "data_source_stripe.png", "data_source_teradata.png", "data_source_trello.png", "data_source_twitter.png", "data_source_xero.png"];
+
+var IMAGES = ['allscripts', 'aws', 'buildermt', 'csv', 'excel', 'facebook', 'googleanalytics', 'hubspot', 'instagram', 'jira', 'mckesson','netsuite','oracle','quickbooks','sage','salesforce','slack','stripe','twitter','woo','workday'];
 
 function getRandomImageNotInUse(imgsInUse) {
 	while (1) {
@@ -13,7 +14,7 @@ function getRandomImageNotInUse(imgsInUse) {
 }
 
 function getRandomImageUri() {
-	return '/images/' + IMAGES[getRandomNumber(0, IMAGES.length - 1)];
+	return '/images/data_source_' + IMAGES[getRandomNumber(0, IMAGES.length - 1)] + '.png';
 }
 
 function calculateNextValue(initialValue, finalValue, percentProgress) {
